@@ -1,0 +1,3 @@
+/* Gravity Chat Javascript
+ *
+ */
