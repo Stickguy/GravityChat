@@ -134,7 +134,7 @@ function create_gravitychat_shortcode($atts) {
 	}
 	$gform = GFAPI::get_form( $id ); // get form object from gravity forms API
 
-	$settings = GFAPI::get_form_settings( $gform );
+	//$settings = GFAPI::get_form_settings( $gform );
 var_dump($settings);
 	$form = '<form method="POST" id="chatbot-form"><br>'; // will instantiate using jquery to allow callbacks
 
