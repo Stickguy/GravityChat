@@ -78,7 +78,7 @@ function findRedirectValue($array){
  * Handle GravityChat Form Submission
  *
  */
-function chatbot_form_submit() {
+function gravitychat_form_submit() {
     $formData = $_POST['subdat'] ;
 	$formID = $_POST['formid'] ;
 	$input_values = [];
@@ -98,7 +98,6 @@ function chatbot_form_submit() {
 
 	}
 	$result = GFAPI::submit_form( $formID, $input_values ); //submit form
-	logToFile("ff_key.log", "Function Fired" . print_r($redirectURL, TRUE)  );
 	//echo 'That Worked Yo';
 
 	$redirectURL = findRedirectValue($input_values);
@@ -108,8 +107,8 @@ function chatbot_form_submit() {
 	wp_die();
 }
 
-add_action( 'wp_ajax_chatbot_submit', 'chatbot_form_submit' );
-add_action( 'wp_ajax_nopriv_chatbot_submit', 'chatbot_form_submit' );
+add_action( 'wp_ajax_gravitychat_submit', 'gravitychat_form_submit' );
+add_action( 'wp_ajax_nopriv_gravitychat_submit', 'gravitychat_form_submit' );
 
 /*
  * Create GravityChat Shortcode
@@ -210,7 +209,7 @@ function create_gravitychat_shortcode($atts) {
 
 		var formData = conversationalForm.getFormData(true);
         var data = {
-		     'action': 'chatbot_submit',
+		     'action': 'gravitychat_submit',
 		     'subdat': formData,
 			 'formid': <?php echo $id; ?>
 		                         };
