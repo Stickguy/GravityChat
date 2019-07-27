@@ -20,8 +20,8 @@ To send the user to a custom URL use a radio field with one button as the last f
 
 __To Do:__
 
-⋅⋅[ ] Add settings in plugin to customize chat icons
-⋅⋅[ ] Clean up form settings area 
-⋅⋅[ ] Add support for "chatbot style" modal popup to the shortcode
-⋅⋅[ ] Add support for remaining Gravity Form Field Types
-⋅⋅[ ] Add sample Gravity Forms for import to repository
+- [ ] Add settings in plugin to customize chat icons
+- [ ] Clean up form settings area
+- [ ] Add support for "chatbot style" modal popup to the shortcode
+- [ ] Add support for remaining Gravity Form Field Types
+- [ ] Add sample Gravity Forms for import to repository
