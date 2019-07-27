@@ -149,6 +149,20 @@ class GFChat extends GFAddOn {
 				'title'  => esc_html__( 'GravityChat Form Settings', 'gravitychat' ),
 				'fields' => array(
 					array(
+						'label'             => esc_html__( 'Robot Image URL', 'gravitychat' ),
+						'type'              => 'text',
+						'name'              => 'robotImage',
+						'tooltip'           => esc_html__( 'Gravity Chat Robot Image Path', 'gravitychat' ),
+						'class'             => 'medium',
+					),
+					array(
+						'label'             => esc_html__( 'User Image URL', 'gravitychat' ),
+						'type'              => 'text',
+						'name'              => 'userImage',
+						'tooltip'           => esc_html__( 'Gravity Chat User Image Path', 'gravitychat' ),
+						'class'             => 'medium',
+					),
+					array(
 						'label'   => esc_html__( 'My checkbox', 'gravitychat' ),
 						'type'    => 'checkbox',
 						'name'    => 'enabled',
@@ -459,5 +473,4 @@ class GFChat extends GFAddOn {
 	public function is_valid_setting( $value ) {
 		return strlen( $value ) < 10;
 	}
-
 }
