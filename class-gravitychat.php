@@ -163,10 +163,10 @@ class GFChat extends GFAddOn {
 						'class'             => 'medium',
 					),
 					array(
-						'label'   => esc_html__( 'My checkbox', 'gravitychat' ),
+						'label'   => esc_html__( 'Enable Modal', 'gravitychat' ),
 						'type'    => 'checkbox',
 						'name'    => 'enabled',
-						'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
+						'tooltip' => esc_html__( 'Display this chat with a floating modal button', 'gravitychat' ),
 						'choices' => array(
 							array(
 								'label' => esc_html__( 'Enabled', 'gravitychat' ),
@@ -174,135 +174,147 @@ class GFChat extends GFAddOn {
 							),
 						),
 					),
-					array(
-						'label'   => esc_html__( 'My checkboxes', 'gravitychat' ),
-						'type'    => 'checkbox',
-						'name'    => 'checkboxgroup',
-						'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
-						'choices' => array(
-							array(
-								'label' => esc_html__( 'First Choice', 'gravitychat' ),
-								'name'  => 'first',
-							),
-							array(
-								'label' => esc_html__( 'Second Choice', 'gravitychat' ),
-								'name'  => 'second',
-							),
-							array(
-								'label' => esc_html__( 'Third Choice', 'gravitychat' ),
-								'name'  => 'third',
-							),
-						),
-					),
-					array(
-						'label'   => esc_html__( 'My Radio Buttons', 'gravitychat' ),
-						'type'    => 'radio',
-						'name'    => 'myradiogroup',
-						'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
-						'choices' => array(
-							array(
-								'label' => esc_html__( 'First Choice', 'gravitychat' ),
-							),
-							array(
-								'label' => esc_html__( 'Second Choice', 'gravitychat' ),
-							),
-							array(
-								'label' => esc_html__( 'Third Choice', 'gravitychat' ),
-							),
-						),
-					),
-					array(
-						'label'      => esc_html__( 'My Horizontal Radio Buttons', 'gravitychat' ),
-						'type'       => 'radio',
-						'horizontal' => true,
-						'name'       => 'myradiogrouph',
-						'tooltip'    => esc_html__( 'This is the tooltip', 'gravitychat' ),
-						'choices'    => array(
-							array(
-								'label' => esc_html__( 'First Choice', 'gravitychat' ),
-							),
-							array(
-								'label' => esc_html__( 'Second Choice', 'gravitychat' ),
-							),
-							array(
-								'label' => esc_html__( 'Third Choice', 'gravitychat' ),
-							),
-						),
-					),
-					array(
-						'label'   => esc_html__( 'My Dropdown', 'gravitychat' ),
-						'type'    => 'select',
-						'name'    => 'mydropdown',
-						'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
-						'choices' => array(
-							array(
-								'label' => esc_html__( 'First Choice', 'gravitychat' ),
-								'value' => 'first',
-							),
-							array(
-								'label' => esc_html__( 'Second Choice', 'gravitychat' ),
-								'value' => 'second',
-							),
-							array(
-								'label' => esc_html__( 'Third Choice', 'gravitychat' ),
-								'value' => 'third',
-							),
-						),
-					),
-					array(
-						'label'             => esc_html__( 'My Text Box', 'gravitychat' ),
-						'type'              => 'text',
-						'name'              => 'mytext',
-						'tooltip'           => esc_html__( 'This is the tooltip', 'gravitychat' ),
-						'class'             => 'medium',
-						'feedback_callback' => array( $this, 'is_valid_setting' ),
-					),
-					array(
-						'label'   => esc_html__( 'My Text Area', 'gravitychat' ),
-						'type'    => 'textarea',
-						'name'    => 'mytextarea',
-						'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
-						'class'   => 'medium merge-tag-support mt-position-right',
-					),
-					array(
-						'label' => esc_html__( 'My Hidden Field', 'gravitychat' ),
-						'type'  => 'hidden',
-						'name'  => 'myhidden',
-					),
-					array(
-						'label' => esc_html__( 'My Custom Field', 'gravitychat' ),
-						'type'  => 'my_custom_field_type',
-						'name'  => 'my_custom_field',
-						'args'  => array(
-							'text'     => array(
-								'label'         => esc_html__( 'A textbox sub-field', 'gravitychat' ),
-								'name'          => 'subtext',
-								'default_value' => 'change me',
-							),
-							'checkbox' => array(
-								'label'   => esc_html__( 'A checkbox sub-field', 'gravitychat' ),
-								'name'    => 'my_custom_field_check',
-								'choices' => array(
-									array(
-										'label'         => esc_html__( 'Activate', 'gravitychat' ),
-										'name'          => 'subcheck',
-										'default_value' => true,
-									),
-								),
-							),
-						),
-					),
-					array(
-						'label' => esc_html__( 'Simple condition', 'gravitychat' ),
-						'type'  => 'custom_logic_type',
-						'name'  => 'custom_logic',
-					),
-					array(
-						'label' => esc_html__( 'Field Select', 'gravitychat' ),
-						'type'  => 'field_select',
-						'name'  => 'my_field',
-					),
-				),
+					// array(
+					// 	'label'   => esc_html__( 'My checkbox', 'gravitychat' ),
+					// 	'type'    => 'checkbox',
+					// 	'name'    => 'enabled',
+					// 	'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
+					// 	'choices' => array(
+					// 		array(
+					// 			'label' => esc_html__( 'Enabled', 'gravitychat' ),
+					// 			'name'  => 'enabled',
+					// 		),
+					// 	),
+					// ),
+					// array(
+					// 	'label'   => esc_html__( 'My checkboxes', 'gravitychat' ),
+					// 	'type'    => 'checkbox',
+					// 	'name'    => 'checkboxgroup',
+					// 	'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
+					// 	'choices' => array(
+					// 		array(
+					// 			'label' => esc_html__( 'First Choice', 'gravitychat' ),
+					// 			'name'  => 'first',
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Second Choice', 'gravitychat' ),
+					// 			'name'  => 'second',
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Third Choice', 'gravitychat' ),
+					// 			'name'  => 'third',
+					// 		),
+					// 	),
+					// ),
+					// array(
+					// 	'label'   => esc_html__( 'My Radio Buttons', 'gravitychat' ),
+					// 	'type'    => 'radio',
+					// 	'name'    => 'myradiogroup',
+					// 	'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
+					// 	'choices' => array(
+					// 		array(
+					// 			'label' => esc_html__( 'First Choice', 'gravitychat' ),
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Second Choice', 'gravitychat' ),
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Third Choice', 'gravitychat' ),
+					// 		),
+					// 	),
+					// ),
+					// array(
+					// 	'label'      => esc_html__( 'My Horizontal Radio Buttons', 'gravitychat' ),
+					// 	'type'       => 'radio',
+					// 	'horizontal' => true,
+					// 	'name'       => 'myradiogrouph',
+					// 	'tooltip'    => esc_html__( 'This is the tooltip', 'gravitychat' ),
+					// 	'choices'    => array(
+					// 		array(
+					// 			'label' => esc_html__( 'First Choice', 'gravitychat' ),
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Second Choice', 'gravitychat' ),
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Third Choice', 'gravitychat' ),
+					// 		),
+					// 	),
+					// ),
+					// array(
+					// 	'label'   => esc_html__( 'My Dropdown', 'gravitychat' ),
+					// 	'type'    => 'select',
+					// 	'name'    => 'mydropdown',
+					// 	'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
+					// 	'choices' => array(
+					// 		array(
+					// 			'label' => esc_html__( 'First Choice', 'gravitychat' ),
+					// 			'value' => 'first',
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Second Choice', 'gravitychat' ),
+					// 			'value' => 'second',
+					// 		),
+					// 		array(
+					// 			'label' => esc_html__( 'Third Choice', 'gravitychat' ),
+					// 			'value' => 'third',
+					// 		),
+					// 	),
+					// ),
+					// array(
+					// 	'label'             => esc_html__( 'My Text Box', 'gravitychat' ),
+					// 	'type'              => 'text',
+					// 	'name'              => 'mytext',
+					// 	'tooltip'           => esc_html__( 'This is the tooltip', 'gravitychat' ),
+					// 	'class'             => 'medium',
+					// 	'feedback_callback' => array( $this, 'is_valid_setting' ),
+					// ),
+					// array(
+					// 	'label'   => esc_html__( 'My Text Area', 'gravitychat' ),
+					// 	'type'    => 'textarea',
+					// 	'name'    => 'mytextarea',
+					// 	'tooltip' => esc_html__( 'This is the tooltip', 'gravitychat' ),
+					// 	'class'   => 'medium merge-tag-support mt-position-right',
+					// ),
+					// array(
+					// 	'label' => esc_html__( 'My Hidden Field', 'gravitychat' ),
+					// 	'type'  => 'hidden',
+					// 	'name'  => 'myhidden',
+					// ),
+					// array(
+					// 	'label' => esc_html__( 'My Custom Field', 'gravitychat' ),
+					// 	'type'  => 'my_custom_field_type',
+					// 	'name'  => 'my_custom_field',
+					// 	'args'  => array(
+					// 		'text'     => array(
+					// 			'label'         => esc_html__( 'A textbox sub-field', 'gravitychat' ),
+					// 			'name'          => 'subtext',
+					// 			'default_value' => 'change me',
+					// 		),
+					// 		'checkbox' => array(
+					// 			'label'   => esc_html__( 'A checkbox sub-field', 'gravitychat' ),
+					// 			'name'    => 'my_custom_field_check',
+					// 			'choices' => array(
+					// 				array(
+					// 					'label'         => esc_html__( 'Activate', 'gravitychat' ),
+					// 					'name'          => 'subcheck',
+					// 					'default_value' => true,
+					// 				),
+					// 			),
+					// 		),
+					// 	),
+					// ),
+					// array(
+					// 	'label' => esc_html__( 'Simple condition', 'gravitychat' ),
+					// 	'type'  => 'custom_logic_type',
+					// 	'name'  => 'custom_logic',
+					// ),
+					// array(
+					// 	'label' => esc_html__( 'Field Select', 'gravitychat' ),
+					// 	'type'  => 'field_select',
+					// 	'name'  => 'my_field',
+					// ),
+				),// fields
 			),
 		);
 	}
