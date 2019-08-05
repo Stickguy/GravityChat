@@ -200,7 +200,7 @@ function create_gravitychat_shortcode($atts) {
   </span>
 </button>
 <div class="modal-wrapper" id="cf-context">
-	<header class="modal-header"></header>
+	<div class="gchat-modal-header"><div class="mw-close">x</div></div>
 <?php
 	echo $form;
 ?>
@@ -220,27 +220,32 @@ function create_gravitychat_shortcode($atts) {
 				const CLASS_CIRCLE = '.circle';
 				const CLASS_ICON = '.icon-elements';
 				const CLASS_MODAL = '.modal-wrapper';
+				const CLASS_CLOSE = '.mw-close';
 				const CLASS_ICON_ACTIVE = 'js-icon-active';
 				const CLASS_MODAL_ACTIVE = 'js-modal-active';
+				const CLASS_CLOSE_ACTIVE = 'js-close-active';
 
 				const elementCircle = document.querySelector(CLASS_CIRCLE);
 				const elementIcon = document.querySelector(CLASS_ICON);
 				const elementModal = document.querySelector(CLASS_MODAL);
-				// const elementInput = document.querySelector('#myInput');
+				const elementClose = document.querySelector(CLASS_CLOSE);
 
 				const triggerAnimation = () => {
 				const isActive = elementIcon.classList.contains(CLASS_ICON_ACTIVE);
-console.log(isActive);
+// console.log(isActive);
 				isActive ? (
 					elementIcon.classList.remove(CLASS_ICON_ACTIVE),
-					elementModal.classList.remove(CLASS_MODAL_ACTIVE)
+					elementModal.classList.remove(CLASS_MODAL_ACTIVE),
+					elementModal.classList.remove(CLASS_CLOSE_ACTIVE)
 					) : (
 					elementIcon.classList.add(CLASS_ICON_ACTIVE),
-					elementModal.classList.add(CLASS_MODAL_ACTIVE)
+					elementModal.classList.add(CLASS_MODAL_ACTIVE),
+					elementModal.classList.add(CLASS_CLOSE_ACTIVE)
 					);
 				}
 
 				elementCircle.addEventListener('click', () => triggerAnimation());
+				elementClose.addEventListener('click', () => triggerAnimation());
 			}
 
 			(function($) {

@@ -61,32 +61,53 @@ cf-input[tag-type="group"].hide-input cf-input-button {
 }
 
 .modal-wrapper {
+  position: fixed;
+  bottom: -100;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
-  width: 375px;
-  height: 500px;
-  position: absolute;
-  right: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   visibility: hidden;
   opacity: 0;
-  bottom: 80px;
   transition: opacity 200ms ease-out, bottom 200ms ease-out;
   border-radius: 5px;
   z-index: -1;
 }
 
 @media (min-width: 768px) {
-
-.modal-wrapper {
-  width: 720px;
-  height: 800px;
+  .modal-wrapper {
+    max-width: 600px;
+    width:100%;
+  }
 }
 
+.gchat-modal-header {
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.1), 0 7px 10px 1px rgba(0,0,0,.02), 0 2px 16px 1px rgba(0,0,0,.01);
+    background-color: #50E3C2;
+    padding: 10px 48px 10px 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
-.modal-input {
+.mw-close {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* .modal-input {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -95,31 +116,31 @@ cf-input[tag-type="group"].hide-input cf-input-button {
   border-top: 1px solid #E6E7F0;
   font-size: 14px;
   font-weight: 300;
-}
+} */
 
-input::placeholder {
+/* input::placeholder {
   color: #CACEDB;
-}
+} */
 
 .js-modal-active {
   visibility: visible;
   opacity: 1;
-  z-index: auto;
-  bottom: -800%; /* orig 100 px */
+  z-index: 8654;
+  bottom: 0;
 }
 
 @media (min-width: 768px) {
-
-.js-modal-active {
-  bottom: -1400%;
-}
-
+  .js-modal-active {
+    bottom: 0;
+  }
 }
 
 @media (min-width: 992px) {
-
-.js-modal-active {
-  bottom: -300%;
+  .js-modal-active {
+    bottom: 0;
+  }
 }
 
-}
+.conversational-form {
+    top: 70px;
+  }
